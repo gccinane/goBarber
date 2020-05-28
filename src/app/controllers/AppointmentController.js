@@ -1,7 +1,7 @@
 import * as Yup from 'yup';
 import Appointment from '../models/Appointment';
 import { startOfHour, parseISO, isBefore, format } from 'date-fns';
-import pt from 'date-fns/locale/pt';
+import pt from 'date-fns/locale/pt-BR';
 import User from '../models/User';
 import File from '../models/File';
 import Notification from '../schemas/Notification';
@@ -18,6 +18,7 @@ class AppointmentController {
     }
 
     const { provider_id, date } = req.body;
+    console.log(date);
 
     const isProvider = await User.findOne({
       where: { id: provider_id, provider: true },
@@ -28,6 +29,16 @@ class AppointmentController {
         .status(401)
         .json({ error: 'You can only create appointments with providers' });
     }
+
+    /*
+      Check if provider is the same as the user attempting to make appointment
+    */
+    if (req.userId === provider_id) {
+      return res
+        .status(400)
+        .json({ error: 'Providers cannot make appointments with themselves' });
+    }
+
     /*
       Check past date
     */
@@ -53,12 +64,14 @@ class AppointmentController {
         .status(400)
         .json({ error: 'Appointment date is not available' });
     }
+    console.log(date);
 
     const appointment = await Appointment.create({
       user_id: req.userId,
       provider_id,
       date,
     });
+    console.log(appointment);
 
     /*
       Notify appointment provider
