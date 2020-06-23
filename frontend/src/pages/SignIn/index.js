@@ -1,12 +1,18 @@
-import React, { useEffect } from 'react';
-
+import React from 'react';
+import { Link } from 'react-router-dom';
+import logo from '../../assets/logo.svg';
 // import { Container } from './styles';
 
 export default function SignIn() {
-  useEffect(() => {
-    return () => {
-      console.tron.log('SAAAAAAAAAAAAI');
-    };
-  }, []);
-  return <h1>pertetuai o bem</h1>;
+  return (
+    <>
+      <img src={logo} alt="GoBarber" />
+      <form>
+        <input type="email" placeholder="Seu E-mail" />
+        <input type="password" placeholder="Sua senha secreta" />
+        <button type="submit">Acessar</button>
+        <Link to="/register">Criar conta gratuita</Link>
+      </form>
+    </>
+  );
 }
