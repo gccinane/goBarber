@@ -8,14 +8,19 @@ import SignUp from '../pages/SignUp';
 import Profile from '../pages/Profile';
 import Dashboard from '../pages/Dashboard';
 
-export default function Routes() {
+const Routes = () => {
   return (
-    <Switch>
-      <Route exact path="/" component={SignIn} />
-      <Route path="/register" component={SignUp} />
+    <>
+      <Switch>
+        <Route path="/register" component={SignUp} />
 
-      <Route path="/dashboard" component={Dashboard} isPrivate />
-      <Route path="/profile" component={Profile} isPrivate />
-    </Switch>
+        <Route path="/dashboard" component={Dashboard} isPrivate />
+        <Route path="/profile" component={Profile} isPrivate />
+
+        <Route exact path="/" component={SignIn} />
+      </Switch>
+    </>
   );
-}
+};
+
+export default Routes;
