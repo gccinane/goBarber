@@ -1,7 +1,7 @@
 import React from 'react';
-import { Provider } from 'react-redux';
 
 import { Router } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
 import './config/ReactotronConfig';
 
@@ -17,8 +17,8 @@ function App() {
     <Provider store={store}>
       <Router history={history}>
         <Routes />
-        <GlobalStyle />
       </Router>
+      <GlobalStyle />
     </Provider>
   );
 }

@@ -5,7 +5,6 @@ export const Wrapper = styled.div`
   height: 100%;
   background: linear-gradient(-90deg, #7159c1, #ab59c1);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
@@ -40,7 +39,6 @@ export const Content = styled.div`
       margin: 0 0 10px;
       font-weight: bold;
     }
-
     button {
       margin: 5px 0 0;
       height: 44px;
@@ -49,7 +47,7 @@ export const Content = styled.div`
       color: #fff;
       border: 0;
       border-radius: 4px;
-      font-size: 14px;
+      font-size: 16px;
       transition: background 0.2s;
 
       &:hover {
@@ -62,6 +60,7 @@ export const Content = styled.div`
       margin-top: 15px;
       font-size: 16px;
       opacity: 0.8;
+
       &:hover {
         opacity: 1;
       }
