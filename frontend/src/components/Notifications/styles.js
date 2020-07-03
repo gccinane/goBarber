@@ -33,6 +33,7 @@ export const Scroll = styled(PerfectScrollbar)`
 `;
 
 export const NotificationList = styled.div`
+  z-index: 1;
   position: absolute;
   width: 260px;
   left: calc(50% - 130px);

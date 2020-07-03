@@ -23,7 +23,7 @@ function Header() {
               <strong>{profile.name}</strong>
               <Link to="/profile">Meu perfil</Link>
             </div>
-            <img src={profile.avatar.url} alt="Fernandes" />
+            <img src={profile.avatar ? profile.avatar.url : null} alt="" />
           </Profile>
         </aside>
       </Content>
