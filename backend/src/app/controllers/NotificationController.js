@@ -6,7 +6,6 @@ class NotificationController {
     const checkIsProvider = await User.findOne({
       where: { id: req.userId, provider: true },
     });
-    console.log(req.userId);
 
     if (!checkIsProvider) {
       return res
