@@ -1,17 +1,18 @@
 __Este prosejo é uma aplicação baseada um uma barbearia. Contendo agendamento, compromissos, sessão e autenticação__
 
-Para iniciar tem como requisito Docker,
-Instalação
+# Para iniciar tem como requisito Docker
+
+**Instalação**
 
 git clone https://github.com/gccinane/goBarber
 
-Acessar o repositório
+# Acessar o repositório
 
-docker-compose up (Backend)
+**docker-compose up** (Backend)
 
-yarn start (Frontend)
+**yarn start** (Frontend)
 
-Rotas no Backend
+# Rotas no Backend
 
 post('/users') - Criar um usuário
 post('/sessions') - Log in de usuário
