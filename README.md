@@ -1,5 +1,7 @@
 __Este prosejo é uma aplicação baseada um uma barbearia. Contendo agendamento, compromissos, sessão e autenticação__
 
+![](gobarber.gif)
+
 # Para iniciar tem como requisito Docker
 
 **Instalação**
