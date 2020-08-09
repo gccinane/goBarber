@@ -39,5 +39,6 @@ module.exports = {
         rootPathSuffix: 'src',
       },
     },
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
 };
