@@ -10,6 +10,7 @@ module.exports = {
     SharedArrayBuffer: 'readonly',
     __DEV__: true,
   },
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -22,6 +23,8 @@ module.exports = {
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': ['error', {extensions: ['.js', '.jsx']}],
     'import/prefer-default-export': 'off',
+    'import/no-unresolved': 'off',
+
     'no-unused-vars': ['error', {argsIgnorePattern: '^_'}],
     'react/jsx-one-expression-per-line': 'off',
     'global-require': 'off',

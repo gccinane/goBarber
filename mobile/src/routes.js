@@ -12,8 +12,8 @@ export default function Routes() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen name="SignIn" exact component={SignIn} />
         <Stack.Screen name="SignUp" component={SignUp} />
-        <Stack.Screen name="SignIn" component={SignIn} />
       </Stack.Navigator>
     </NavigationContainer>
   );
